@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    print("Route is working")  # 👈 add this
     results = []
 
     if request.method == "POST":
@@ -15,9 +14,6 @@ def home():
 
     return render_template("index.html", results=results)
 
+
 if __name__ == "__main__":
-<<<<<<< HEAD
     app.run()
-=======
-    app.run()
->>>>>>> 75961d77f30c1ddfcdf41febec7434058e01158a
