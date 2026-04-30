@@ -1,0 +1,13 @@
+Subject,Topic,Difficulty,Prerequisite,Tags,Resource
+ML,Linear Regression,Beginner,None,math,https://youtu.be/nk2CQITm_eo
+ML,Logistic Regression,Intermediate,Linear Regression,math,https://youtu.be/zM4VZR0px8E
+ML,Decision Trees,Intermediate,Linear Regression,tree,https://youtu.be/7VeUPuFGJHk
+ML,Random Forest,Advanced,Decision Trees,ensemble,https://youtu.be/J4Wdy0Wc_xQ
+ML,KNN,Beginner,None,distance,https://youtu.be/HVXime0nQeI
+ML,SVM,Advanced,Logistic Regression,classification,https://youtu.be/efR1C6CvhmE
+DSA,Arrays,Beginner,None,structure,https://youtu.be/8hly31xKli0
+DSA,Linked List,Intermediate,Arrays,structure,https://youtu.be/NobHlGUjV3g
+DSA,Stacks,Beginner,None,structure,https://youtu.be/1AJ4ldcH2t4
+DSA,Queues,Beginner,None,structure,https://youtu.be/zg9ih6SVACc
+DSA,Trees,Intermediate,Linked List,tree,https://youtu.be/oSWTXtMglKE
+DSA,Graphs,Advanced,Trees,graph,https://youtu.be/gXgEDyodOJU
