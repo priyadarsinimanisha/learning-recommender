@@ -2,41 +2,46 @@
 <html>
 <head>
     <title>Learning Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h1>Personalized Learning System</h1>
+<div class="container">
 
-<form method="POST">
-    <label>Subject:</label>
-    <select name="subject">
-        <option value="ML">Machine Learning</option>
-        <option value="DSA">DSA</option>
-    </select>
+    <h1>🎯 Learning Recommender</h1>
 
-    <br><br>
+    <form method="POST">
+        <label>Subject</label>
+        <select name="subject">
+            <option value="ML">Machine Learning</option>
+            <option value="DSA">DSA</option>
+        </select>
 
-    <label>Level:</label>
-    <select name="level">
-        <option value="Beginner">Beginner</option>
-        <option value="Intermediate">Intermediate</option>
-        <option value="Advanced">Advanced</option>
-    </select>
+        <label>Level</label>
+        <select name="level">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
 
-    <br><br>
+        <button type="submit">Get Recommendations</button>
+    </form>
 
-    <button type="submit">Get Recommendations</button>
-</form>
+    {% if results %}
+        <div class="result">
+            <h3>Recommended Topics:</h3>
+            <ul>
+                {% for item in results %}
+                    <li>
+                        {{ item.Topic }} -
+                        <a href="{{ item.Resource }}" target="_blank">Learn</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
 
-<h2>Recommended Topics:</h2>
-<ul>
-    {% for item in results %}
-        <li>
-            {{ item.Topic }} -
-            <a href="{{ item.Resource }}" target="_blank">Learn</a>
-        </li>
-    {% endfor %}
-</ul>
+</div>
 
 </body>
 </html>

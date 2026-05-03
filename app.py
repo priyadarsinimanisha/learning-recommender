@@ -10,10 +10,13 @@ def home():
     if request.method == "POST":
         subject = request.form.get("subject")
         level = request.form.get("level")
-        results = recommend(subject, level)
+
+        if subject and level:
+            results = recommend(subject, level)
 
     return render_template("index.html", results=results)
 
 
+# Run locally
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
